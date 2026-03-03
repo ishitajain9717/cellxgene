@@ -238,7 +238,7 @@ for idx, ds in enumerate(cxg_datasets_to_annotate):
             continue
         else:
             logger.error(f"Unhandled ValidationError for dataset_id={ds['dataset_id']}: {error_msg}")
-            raise
+            continue
 
 if args.track:
     ln.finish()
